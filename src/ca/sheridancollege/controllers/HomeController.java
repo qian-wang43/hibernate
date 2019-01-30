@@ -35,19 +35,7 @@ public class HomeController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		List<Student> studentList = dao.queryStudent();
-/*		List<Person> studentList = dao.queryStudentByName("Student 8");
 
-
-		System.out.println("Size of list returned is: " + studentList.size());
-
-		response.getWriter().append("<h1>It worked!!!</h1>");
-		
-		for (Person s : studentList) {
-			response.getWriter().append("<h3>" + s.getName() + "</h3>");
-		}
-		
-*/
 		response.getWriter().append("<h1>It worked!!!</h1>");
 		
 	}
@@ -80,7 +68,7 @@ public class HomeController extends HttpServlet {
 			
 		}
 		
-		System.out.println(personList.size());
+
 		request.setAttribute("personList", personList);
 		request.setAttribute("mode", mode);
 		request.getRequestDispatcher("view.jsp").forward(request,response);
